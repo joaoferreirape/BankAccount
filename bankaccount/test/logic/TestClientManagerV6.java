@@ -17,15 +17,15 @@ import org.junit.Test;
 public class TestClientManagerV6 {
 	
 	private ClientManager clientManager;
-	private List<Client> clients;
+	private List<ClientDataType> clients;
 	
 	@Before
 	public void test_beforeActions() {
 		// DataSet de entrada
-		Client client01 = new Client(1, "Client 01", 41, "mail@client.01", true, 1);
-		Client client02 = new Client(2, "Client 02", 42, "mail@client.02", true, 2);
-		Client client03 = new Client(3, "Client 03", 43, "mail@client.03", true, 3);
-		Client client04 = new Client(4, "Client 03", 16, "mail@client.03", true, 4);
+		ClientDataType client01 = new ClientDataType(1, "Client 01", 41, "mail@client.01", true, 1);
+		ClientDataType client02 = new ClientDataType(2, "Client 02", 42, "mail@client.02", true, 2);
+		ClientDataType client03 = new ClientDataType(3, "Client 03", 43, "mail@client.03", true, 3);
+		ClientDataType client04 = new ClientDataType(4, "Client 03", 16, "mail@client.03", true, 4);
 //		List<Client> clients = new ArrayList<>();
 		clients = new ArrayList<>();
 		clients.add(client01);
@@ -46,7 +46,7 @@ public class TestClientManagerV6 {
 //	public void test_findClientById() {
 //		System.out.println("Executando o teste: test_findClientById");	
 //		// Função para avaliação e análise
-//		Client client = clientManager.findClientById(2);
+//		ClientDataType client = clientManager.findClientById(2);
 //		// DataSet de saída e verificação
 //		assertThat(client.getIdClient(), is(2));
 //		}
@@ -54,7 +54,7 @@ public class TestClientManagerV6 {
 //	@Test
 //	public void testNull_findClientById() {
 //		// Função para avaliação e análise
-//		Client client = clientManager.findClientById(9);
+//		ClientDataType client = clientManager.findClientById(9);
 //		// DataSet de saída e verificação
 //		assertNull(client);
 //	}

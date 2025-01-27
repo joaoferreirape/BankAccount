@@ -1,6 +1,6 @@
 package logic;
 
-public class Client {
+public class ClientDataType {
 	private int _idClient;
 	private String _nameClient;
 	private int _ageClient;
@@ -9,7 +9,7 @@ public class Client {
 	private int _idAccount;
 
 	/**
-	 * Método construtor da classe Client
+	 * Método construtor da classe ClientDataType
 	 * @param idClient
 	 * @param nameClient
 	 * @param ageClient
@@ -17,7 +17,7 @@ public class Client {
 	 * @param statusClient
 	 * @param idAccount
 	 */
-	public Client(int idClient, String nameClient, int ageClient, String mailClient, boolean statusClient, int idAccount) {
+	public ClientDataType(int idClient, String nameClient, int ageClient, String mailClient, boolean statusClient, int idAccount) {
 		this._idClient = idClient;
 		this._nameClient = nameClient;
 		this._ageClient = ageClient;

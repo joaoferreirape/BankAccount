@@ -4,22 +4,22 @@ import java.util.List;
 
 public class ClientManager {
 	
-	private List<Client> _clients;
+	private List<ClientDataType> _clients;
 	
-	public ClientManager(List<Client> clients) {
+	public ClientManager(List<ClientDataType> clients) {
 		this._clients = clients;
 	}
 	
-	public List<Client> getClients() { return this._clients; }
+	public List<ClientDataType> getClients() { return this._clients; }
 	
-	public void addClient(Client newClient) {
+	public void addClient(ClientDataType newClient) {
 		this._clients.add(newClient);
 	}
 	
 	public boolean removeClientById(int idClient) {
 		boolean rt = false;
 		for(int i = 0; i < this._clients.size(); i++) {
-			Client client = this._clients.get(i);
+			ClientDataType client = this._clients.get(i);
 			if(client.getIdClient() == idClient) {
 				this._clients.remove(i);
 				rt = true;
@@ -29,9 +29,9 @@ public class ClientManager {
 		return rt;
 	}
 	
-	public Client findClientById(int idClient) {
-		Client rt = null;
-		for (Client client : _clients) {
+	public ClientDataType findClientById(int idClient) {
+		ClientDataType rt = null;
+		for (ClientDataType client : _clients) {
 			if(client.getIdClient() == idClient) {
 				rt = client;
 				break;
@@ -43,7 +43,7 @@ public class ClientManager {
 	public boolean findStatusClientById(int idClient) {
 		boolean rt = false;
 		for(int i = 0; i < this._clients.size(); i++) {
-			Client client = this._clients.get(i);
+			ClientDataType client = this._clients.get(i);
 			if(client.getIdClient() == idClient) {
 				rt = client.getStatusClient();
 				break;

@@ -21,7 +21,7 @@ public class Main {
 				case 1:
 					System.out.println("Insert Client Id: ");
 					int idClientMenu1 = sc.nextInt();
-					Client clientMenu1 = clientManager.findClientById(idClientMenu1);
+					ClientDataType clientMenu1 = clientManager.findClientById(idClientMenu1);
 					if(clientMenu1 != null) {
 						System.out.println(clientMenu1.clientData());
 					} else {
@@ -43,7 +43,7 @@ public class Main {
 				case 3:
 					System.out.println("Insert Client Id: ");
 					int idClientMenu2 = sc.nextInt();
-					Client clientMenu2 = clientManager.findClientById(idClientMenu2);
+					ClientDataType clientMenu2 = clientManager.findClientById(idClientMenu2);
 					if(clientMenu2 != null) {
 						clientMenu2.setStatusClient(true);
 						System.out.println("Client activated!");
@@ -55,7 +55,7 @@ public class Main {
 				case 4:
 					System.out.println("Insert Client Id: ");
 					int idClientMenu3 = sc.nextInt();
-					Client clientMenu3 = clientManager.findClientById(idClientMenu3);
+					ClientDataType clientMenu3 = clientManager.findClientById(idClientMenu3);
 					if(clientMenu3 != null) {
 						clientMenu3.setStatusClient(false);
 						System.out.println("Client deactivated!");
@@ -91,15 +91,15 @@ public class Main {
 	
 	private static void stubData() {
 		List<Account> accounts = new ArrayList<>();
-		List<Client> clients = new ArrayList<>();
+		List<ClientDataType> clients = new ArrayList<>();
 		
 		Account account01 = new Account(1, 0, true);
 		Account account02 = new Account(2, 0, true);
 		accounts.add(account01);
 		accounts.add(account02);
 		
-		Client client01 = new Client(1, "Dismenielisson Jerry",   21, "jerry@saite.pra.la", true, account01.getIdAccount());
-		Client client02 = new Client(2, "O Sábio Senhor do Nada", 42, "sabio@senhor.nada",  true, account02.getIdAccount());
+		ClientDataType client01 = new ClientDataType(1, "Dismenielisson Jerry",   21, "jerry@saite.pra.la", true, account01.getIdAccount());
+		ClientDataType client02 = new ClientDataType(2, "O Sábio Senhor do Nada", 42, "sabio@senhor.nada",  true, account02.getIdAccount());
 		clients.add(client01);
 		clients.add(client02);
 		
